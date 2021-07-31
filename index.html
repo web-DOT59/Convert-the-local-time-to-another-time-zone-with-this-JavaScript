@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function calcTime(city,offset){
+		var b=new Date()
+		var utc=b.getTime()+(b.getTimezoneOffset()*60000);
+		var nd=new Date(utc+(3600000*offset));
+		return "the local time of "+city+" is"+nd.toLocaleString();
+
+	}
+    
+    //get specific country time
+    console.log(calcTime('argentina','-3'))
+    console.log(calcTime('afganistan','+4.3'))
+    console.log(calcTime('Denmark','+2'))
+    console.log(calcTime('japan','+9'))
+
+
+
+</script>
+
+</body>
+</html>
